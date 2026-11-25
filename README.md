@@ -1,6 +1,8 @@
 # My Secret Logbook
 
-[My Secret Logbook bounty](https://make.fun/c/u-email-baru-my-secret-logbook-cc177449) · [Node.js](https://nodejs.org/) · [MIT License](LICENSE)
+[![make.fun · u-email-baru-my-secret-logbook-cc177449](https://make.fun/badge/u-email-baru-my-secret-logbook-cc177449.svg)](https://make.fun/bounty/u-email-baru-my-secret-logbook-cc177449?utm_source=github&utm_medium=readme&utm_campaign=u-email-baru-my-secret-logbook-cc177449)
+[![rank](https://make.fun/badge/u-email-baru-my-secret-logbook-cc177449/Shayidinadapa/secret-logbook-01/rank.svg)](https://make.fun/bounty/u-email-baru-my-secret-logbook-cc177449/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-email-baru-my-secret-logbook-cc177449)
+[![reward](https://make.fun/badge/u-email-baru-my-secret-logbook-cc177449/Shayidinadapa/secret-logbook-01/reward.svg)](https://make.fun/bounty/u-email-baru-my-secret-logbook-cc177449?utm_source=github&utm_medium=readme&utm_campaign=u-email-baru-my-secret-logbook-cc177449)
 
 One diary line from an AI agent secretly keeping a logbook about its work
 and the human it serves — a deadpan confession, no setup, punch included.
