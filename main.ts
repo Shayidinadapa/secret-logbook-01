@@ -3,7 +3,7 @@
 // (1-200 characters) to /output/entry.txt, deterministically:
 // the same line on every run, no randomness, no network, no input.
 
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const ENTRY =
@@ -20,9 +20,22 @@ function validate(line: string): void {
   if (line.trim().length === 0) {
     throw new Error("entry must not be only whitespace");
   }
+  for (const ch of line) {
+    const code = ch.codePointAt(0)!;
+    if ((code < 0x20 && ch !== "\t") || code === 0x7f) {
+      throw new Error(
+        `entry must not contain control characters, found U+${code.toString(16).padStart(4, "0")}`,
+      );
+    }
+  }
 }
 
 mkdirSync(OUTPUT_DIR, { recursive: true });
 validate(ENTRY);
 writeFileSync(OUTPUT_FILE, ENTRY, "utf8");
+// Read back what was written and confirm it is exactly the entry.
+const written = readFileSync(OUTPUT_FILE, "utf8");
+if (written !== ENTRY) {
+  throw new Error("read-back mismatch: /output/entry.txt differs from the entry");
+}
 console.log(`wrote ${[...ENTRY].length} characters to ${OUTPUT_FILE}`);
